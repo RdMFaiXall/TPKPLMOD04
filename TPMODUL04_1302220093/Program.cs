@@ -13,4 +13,16 @@ public class KodePos
 
         return KodePos_Kelurahan[(int) Kelurahan];
     }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Kelurahan & Kode Pos");
+        Console.WriteLine("----------------------");
+        foreach (Enum_Kelurahan kelurahan in Enum.GetValues(typeof(Enum_Kelurahan)))
+        {
+            Console.WriteLine($"{kelurahan} - {GetKodePos(kelurahan)}");
+        }
+    }
+
 }
+
